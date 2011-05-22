@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.example.testing.unit.test"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="3" />
+    <instrumentation android:targetPackage="org.example.testing.unit" android:name="android.test.InstrumentationTestRunner" />
+    <application android:icon="@drawable/icon">
+
+    <uses-library android:name="android.test.runner" />
+    </application>
+</manifest>
