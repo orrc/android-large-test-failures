@@ -3,15 +3,14 @@
 Running large numbers of Android unit tests together seems to cause problems.  
 Large being at least 300 to 500 tests for a single project.
 
-While running tests on an Android emulator, at some point the test runner will stop executing and possibly crash.  
-This has not been observed on an actual Android device so far.
+While running tests on an Android device, at some point the test runner will stop executing and possibly crash.  
+This has mainly been observed been in the emulator, but potentially seems to occur on slower Android devices (see the following Stack Overflow link).
 
 See: http://stackoverflow.com/questions/3576887/large-amount-of-unit-tests-cause-freezes-with-failed-binder-transaction
 
-This repository is an attempt to reproduce this as simply as possible,
-with the desire to be able to file meaningful bugs or come up with a solution.
+This repository is an attempt to reproduce this problem as simply as possible, with the desire to be able to file meaningful bugs or come up with a solution ([Bug 18660](http://b.android.com/18660) has since been filed).
 
-It contains a minimal Android project plus test project.  
+The repo contains a minimal Android project plus a respective test project.  
 The test project makes some very basic Android JUnit assertions,
 and repeats them 1000 times, using 1000 separate test methods.
 
